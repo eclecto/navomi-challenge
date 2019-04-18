@@ -1,0 +1,28 @@
+{
+  "name": "navomi-challenge",
+  "version": "1.0.0",
+  "description": "NAVOMI challenge",
+  "repository": "git@github.com:eclecto/navomi-challenge.git",
+  "author": "Eric Newland <eric@crometrics.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./dist,./client,./log.json,./node_modules,./.*rc,./package.json,./npm-debug.log,./yarn.lock --copy-files",
+    "start": "npm run build && node dist/server.js",
+    "client": "cd client && yarn start",
+    "yarn-install": "yarn install && cd client && yarn install",
+    "server": "nodemon --watch dist dist/server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn build\" \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "eslint": "5.12.0",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "nodemon": "^1.18.11",
+    "rimraf": "^2.6.3"
+  }
+}

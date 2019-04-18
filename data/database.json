@@ -1,0 +1,40 @@
+{
+  "movieData": {
+    "movies": {
+      "0": {
+        "title": "Captain Marvelle",
+        "release": "1552021200000",
+        "director": "Anna Boden, Ryan Fleck",
+        "rating": 4.2
+      },
+      "1": {
+        "title": "Citizen Kane",
+        "release": "-893793600000",
+        "director": "Orson Welles",
+        "rating": 4.8
+      },
+      "2": {
+        "title": "Plan 9 from Outer Space",
+        "release": "-329688000000",
+        "director": "Ed Wood",
+        "rating": "1.2"
+      },
+      "10": {
+        "title": "New again",
+        "release": 358488000000,
+        "director": "Bob",
+        "rating": "2.5"
+      },
+      "11": {
+        "title": "A Movie",
+        "release": null,
+        "director": "Eric Newland",
+        "rating": 5
+      }
+    },
+    "lastIndex": 11
+  },
+  "userData": {
+    
+  }
+}

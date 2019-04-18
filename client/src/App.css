@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #cccccc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #333333;
+}
+
+td, th {
+  border: 3px solid #666666;
+  min-height: 29px;
+  padding: 4px 8px;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto 15px;
+  font-size: 24px;
+}
+
+table {
+  width: 800px;
+  max-width: 100%;
+  font-size: 18px;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: 600;
+}
+
+td {
+  font-weight: 400;
+  text-align: left;
+}
+
+th:last-child, td:last-child {
+  border: 0;
+}
+
+.unsaved td {
+  color: #ff6600;
+  font-weight: 600;
+}
+
+button {
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+button span {
+  display: block;
+  padding: 5px;
+}

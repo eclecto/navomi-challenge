@@ -1,0 +1,23 @@
+{
+  "movies": {
+    "0": {
+      "title": "Captain Marvel",
+      "release": "1552021200000",
+      "director": "Anna Boden, Ryan Fleck",
+      "rating": 4.2
+    },
+    "1": {
+      "title": "Citizen Kane",
+      "release": "-893793600000",
+      "director": "Orson Welles",
+      "rating": 4.8
+    },
+    "2": {
+      "title": "Plan 9 from Outer Space",
+      "release": "-329688000000",
+      "director": "Ed Wood",
+      "rating": "1.2"
+    }
+  },
+  "lastIndex": 2
+}
