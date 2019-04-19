@@ -1,15 +1,136 @@
 {
 	"info": {
 		"_postman_id": "de66b873-acc3-4998-bc7c-5670875fef04",
-		"name": "Designing an API",
+		"name": "NAVOMI Challenge",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
+			"name": "Log In",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8d0cfc27-9121-4e0b-b110-69fac5e52f65",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": \"eric\",\n\t\"password\": \"abcdefG1\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3000/api/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Log in to NAVOMI challenge app"
+			},
+			"response": [
+				{
+					"name": "Log In Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"eric\",\n\t\"password\": \"abcdefG1\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3000/api/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "set-cookie",
+							"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaWMiLCJpYXQiOjE1NTU2NDkyNDMsImV4cCI6MTU1NTY1Mjg0M30.X_Ug-xKtdDu5TlYnGgUrejRWnt9aSITpJJARS_D3yOA; Max-Age=3600; Path=/; Expires=Fri, 19 Apr 2019 05:47:23 GMT; HttpOnly"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "16"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 04:47:23 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
 			"name": "Get all movies",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -29,10 +150,17 @@
 			},
 			"response": [
 				{
-					"name": "Postman Echo GET",
+					"name": "Get all movies Example",
 					"originalRequest": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
@@ -50,10 +178,106 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "331"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"14b-T3M6FgdCKTmfUvwH2b3cTGArFC8\""
+						},
+						{
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 04:58:39 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
 					"cookie": [],
-					"body": "{\r\n  \"movies\": {\r\n    \"0\": {\r\n      \"title\": \"Captain Marvel\",\r\n      \"release\": \"1552021200000\",\r\n      \"director\": \"Anna Boden, Ryan Fleck\",\r\n      \"rating\": 4.2\r\n    },\r\n    \"1\": {\r\n      \"title\": \"Citizen Kane\",\r\n      \"release\": \"-893793600000\",\r\n      \"director\": \"Orson Welles\",\r\n      \"rating\": 4.8\r\n    },\r\n    \"2\": {\r\n      \"title\": \"Plan 9 from Outer Space\",\r\n      \"release\": \"-329688000000\",\r\n      \"director\": \"Ed Wood\",\r\n      \"rating\": \"1.2\"\r\n    }\r\n  },\r\n  \"lastIndex\": 2\r\n}"
+					"body": "{\n    \"movies\": {\n        \"0\": {\n            \"title\": \"Captain Marvelle\",\n            \"release\": \"1552021200000\",\n            \"director\": \"Anna Boden, Ryan Fleck\",\n            \"rating\": 4.2\n        },\n        \"1\": {\n            \"title\": \"Citizen Kane\",\n            \"release\": \"-893793600000\",\n            \"director\": \"Orson Welles\",\n            \"rating\": 4.8\n        },\n        \"2\": {\n            \"title\": \"Plan 9 from Outer Space\",\n            \"release\": \"-329688000000\",\n            \"director\": \"Ed Wood\",\n            \"rating\": \"1.2\"\n        }\n    },\n    \"lastIndex\": 12\n}"
+				},
+				{
+					"name": "Get all movies (User not logged in)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3000/api/get",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"get"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "36"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"24-tZtSSibQRrd5rQoOjEPIvQntlhM\""
+						},
+						{
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 05:14:16 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "Unauthorized: User is not logged in."
 				}
 			]
 		},
@@ -77,29 +301,30 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"method\": \"POST\"\n}"
+					"raw": "{\r\n\t\"data\": {\r\n\t  \"title\": \"A Movie\",\r\n\t  \"release\": \"358473600000\",\r\n\t  \"director\": \"Eric Newland\",\r\n\t  \"rating\": 5\r\n\t}\r\n}"
 				},
 				"url": {
-					"raw": "https://postman-echo.com/post",
+					"raw": "https://localhost:3000/api/add",
 					"protocol": "https",
 					"host": [
-						"postman-echo",
-						"com"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
-						"post"
+						"api",
+						"add"
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "Success response",
+					"name": "Add movie example",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -112,17 +337,18 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"method\": \"POST\"\n}"
+							"raw": "{\r\n\t\"data\": {\r\n\t  \"title\": \"A Movie\",\r\n\t  \"release\": \"358473600000\",\r\n\t  \"director\": \"Eric Newland\",\r\n\t  \"rating\": 5\r\n\t}\r\n}"
 						},
 						"url": {
-							"raw": "https://postman-echo.com/post",
+							"raw": "https://localhost:3000/api/add",
 							"protocol": "https",
 							"host": [
-								"postman-echo",
-								"com"
+								"localhost"
 							],
+							"port": "3000",
 							"path": [
-								"post"
+								"api",
+								"add"
 							]
 						}
 					},
@@ -131,40 +357,36 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Content-Encoding",
-							"value": "gzip"
+							"key": "x-powered-by",
+							"value": "Express"
 						},
 						{
-							"key": "Content-Type",
+							"key": "content-type",
 							"value": "application/json; charset=utf-8"
 						},
 						{
-							"key": "Date",
-							"value": "Thu, 04 Oct 2018 13:16:50 GMT"
+							"key": "content-length",
+							"value": "459"
 						},
 						{
-							"key": "ETag",
-							"value": "W/\"21a-6y1+9dLw9Ui/9TFPCS1aNOaKU38\""
+							"key": "etag",
+							"value": "W/\"1cb-hXqdwFjiWASnZA6WMHPNol5w7/I\""
 						},
 						{
-							"key": "Server",
-							"value": "nginx"
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 04:59:51 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
 						},
 						{
 							"key": "Vary",
 							"value": "Accept-Encoding"
-						},
-						{
-							"key": "Content-Length",
-							"value": "376"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"args\": {},\n    \"data\": {\n        \"method\": \"POST\"\n    },\n    \"files\": {},\n    \"form\": {},\n    \"headers\": {\n        \"host\": \"postman-echo.com\",\n        \"content-length\": \"21\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"content-type\": \"application/json\",\n        \"cookie\": \"sails.sid=s%3AG10mxUHVB65q6zAdIPRPk7kAxyMNpmeM.tn9m63fNTjoJBYkiUShtDIIliVwslI4ys8tvItjT2%2BA\",\n        \"postman-token\": \"e96e5264-9de6-4aa6-8737-3ab5489d561c\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\",\n        \"x-forwarded-proto\": \"https\"\n    },\n    \"json\": {\n        \"method\": \"POST\"\n    },\n    \"url\": \"https://postman-echo.com/post\"\n}"
+					"body": "{\n    \"message\": \"Add succeeded.\",\n    \"movieData\": {\n        \"movies\": {\n            \"0\": {\n                \"title\": \"Captain Marvelle\",\n                \"release\": \"1552021200000\",\n                \"director\": \"Anna Boden, Ryan Fleck\",\n                \"rating\": 4.2\n            },\n            \"1\": {\n                \"title\": \"Citizen Kane\",\n                \"release\": \"-893793600000\",\n                \"director\": \"Orson Welles\",\n                \"rating\": 4.8\n            },\n            \"2\": {\n                \"title\": \"Plan 9 from Outer Space\",\n                \"release\": \"-329688000000\",\n                \"director\": \"Ed Wood\",\n                \"rating\": \"1.2\"\n            },\n            \"13\": {\n                \"title\": \"A Movie\",\n                \"release\": \"358473600000\",\n                \"director\": \"Eric Newland\",\n                \"rating\": 5\n            }\n        },\n        \"lastIndex\": 13\n    }\n}"
 				}
 			]
 		},
@@ -194,11 +416,11 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"row\": 0,\n\t\"data\": {\n\t\t\"title\": \"Captain Marvelle\",\n\t\t\"release\": \"1552021200000\",\n\t\t\"director\": \"Anna Boden, Ryan Fleck\",\n\t\t\"rating\": 4.2\n\t}\n}"
+					"raw": "{\n\t\"row\": 13,\n\t\"data\": {\n\t\t\"title\": \"A Movie, Part 2\",\n\t\t\"release\": \"358473600000\",\n\t\t\"director\": \"Eric Newland\",\n\t\t\"rating\": 5\n\t}\n}"
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/save",
-					"protocol": "http",
+					"raw": "https://localhost:3000/api/save",
+					"protocol": "https",
 					"host": [
 						"localhost"
 					],
@@ -211,9 +433,9 @@
 			},
 			"response": [
 				{
-					"name": "Success response",
+					"name": "Update movie Example",
 					"originalRequest": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -224,17 +446,18 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"method\": \"PUT\"\n}"
+							"raw": "{\n\t\"row\": 13,\n\t\"data\": {\n\t\t\"title\": \"A Movie, Part 2\",\n\t\t\"release\": \"358473600000\",\n\t\t\"director\": \"Eric Newland\",\n\t\t\"rating\": 5\n\t}\n}"
 						},
 						"url": {
-							"raw": "https://postman-echo.com/put",
+							"raw": "https://localhost:3000/api/save",
 							"protocol": "https",
 							"host": [
-								"postman-echo",
-								"com"
+								"localhost"
 							],
+							"port": "3000",
 							"path": [
-								"put"
+								"api",
+								"save"
 							]
 						}
 					},
@@ -243,40 +466,36 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Content-Encoding",
-							"value": "gzip"
+							"key": "x-powered-by",
+							"value": "Express"
 						},
 						{
-							"key": "Content-Type",
+							"key": "content-type",
 							"value": "application/json; charset=utf-8"
 						},
 						{
-							"key": "Date",
-							"value": "Thu, 04 Oct 2018 13:17:17 GMT"
+							"key": "content-length",
+							"value": "470"
 						},
 						{
-							"key": "ETag",
-							"value": "W/\"217-JGHStdnnh3wMqCvlmgLBtwwN4Fo\""
+							"key": "etag",
+							"value": "W/\"1d6-qP8r5JP1oFViQo7nOSftLz8lFtw\""
 						},
 						{
-							"key": "Server",
-							"value": "nginx"
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 05:01:10 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
 						},
 						{
 							"key": "Vary",
 							"value": "Accept-Encoding"
-						},
-						{
-							"key": "Content-Length",
-							"value": "376"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"args\": {},\n    \"data\": {\n        \"method\": \"PUT\"\n    },\n    \"files\": {},\n    \"form\": {},\n    \"headers\": {\n        \"host\": \"postman-echo.com\",\n        \"content-length\": \"20\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"content-type\": \"application/json\",\n        \"cookie\": \"sails.sid=s%3AG10mxUHVB65q6zAdIPRPk7kAxyMNpmeM.tn9m63fNTjoJBYkiUShtDIIliVwslI4ys8tvItjT2%2BA\",\n        \"postman-token\": \"7024cdc0-4e44-40c6-9c96-25c68caf4c59\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\",\n        \"x-forwarded-proto\": \"https\"\n    },\n    \"json\": {\n        \"method\": \"PUT\"\n    },\n    \"url\": \"https://postman-echo.com/put\"\n}"
+					"body": "{\n    \"message\": \"Update succeeded.\",\n    \"movieData\": {\n        \"movies\": {\n            \"0\": {\n                \"title\": \"Captain Marvelle\",\n                \"release\": \"1552021200000\",\n                \"director\": \"Anna Boden, Ryan Fleck\",\n                \"rating\": 4.2\n            },\n            \"1\": {\n                \"title\": \"Citizen Kane\",\n                \"release\": \"-893793600000\",\n                \"director\": \"Orson Welles\",\n                \"rating\": 4.8\n            },\n            \"2\": {\n                \"title\": \"Plan 9 from Outer Space\",\n                \"release\": \"-329688000000\",\n                \"director\": \"Ed Wood\",\n                \"rating\": \"1.2\"\n            },\n            \"13\": {\n                \"title\": \"A Movie, Part 2\",\n                \"release\": \"358473600000\",\n                \"director\": \"Eric Newland\",\n                \"rating\": 5\n            }\n        },\n        \"lastIndex\": 13\n    }\n}"
 				}
 			]
 		},
@@ -287,6 +506,16 @@
 					"listen": "test",
 					"script": {
 						"id": "21edd3b2-634c-4db2-bacb-d606558f7c3b",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7358c13b-822a-4baf-b38e-2cd1348685ac",
 						"exec": [
 							""
 						],
@@ -306,11 +535,11 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"row\": \"4\"\n}"
+					"raw": "{\n\t\"row\": \"13\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/delete",
-					"protocol": "http",
+					"raw": "https://localhost:3000/api/delete",
+					"protocol": "https",
 					"host": [
 						"localhost"
 					],
@@ -323,9 +552,9 @@
 			},
 			"response": [
 				{
-					"name": "Success response",
+					"name": "Delete movie example",
 					"originalRequest": {
-						"method": "DELETE",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -336,16 +565,17 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"method\": \"DELETE\"\n}"
+							"raw": "{\n\t\"row\": \"13\"\n}"
 						},
 						"url": {
-							"raw": "https://postman-echo.com/delete",
+							"raw": "https://localhost:3000/api/delete",
 							"protocol": "https",
 							"host": [
-								"postman-echo",
-								"com"
+								"localhost"
 							],
+							"port": "3000",
 							"path": [
+								"api",
 								"delete"
 							]
 						}
@@ -355,44 +585,350 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Content-Encoding",
-							"value": "gzip"
+							"key": "x-powered-by",
+							"value": "Express"
 						},
 						{
-							"key": "Content-Type",
+							"key": "content-type",
 							"value": "application/json; charset=utf-8"
 						},
 						{
-							"key": "Date",
-							"value": "Thu, 04 Oct 2018 13:18:26 GMT"
+							"key": "content-length",
+							"value": "375"
 						},
 						{
-							"key": "ETag",
-							"value": "W/\"222-EaECC84U8vKhL8mPSvAGY65VBbc\""
+							"key": "etag",
+							"value": "W/\"177-JR+xRy3SaRp38MaiZjYxvngnuiE\""
 						},
 						{
-							"key": "Server",
-							"value": "nginx"
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 05:01:45 GMT"
 						},
 						{
-							"key": "set-cookie",
-							"value": "sails.sid=s%3AcoeBrm0wyZAGMQpoxU7JX2keD4frWnPC.KqL1VbDNV8BVsT4ru1qfXLpbuloRyzdCwDKlWRbzUIA; Path=/; HttpOnly"
+							"key": "connection",
+							"value": "close"
 						},
 						{
 							"key": "Vary",
 							"value": "Accept-Encoding"
-						},
-						{
-							"key": "Content-Length",
-							"value": "383"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"args\": {},\n    \"data\": {\n        \"method\": \"DELETE\"\n    },\n    \"files\": {},\n    \"form\": {},\n    \"headers\": {\n        \"host\": \"postman-echo.com\",\n        \"content-length\": \"23\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"content-type\": \"application/json\",\n        \"cookie\": \"sails.sid=s%3ApG9SWO0OWeJMy_NIh2B_S4miHdP4l8x7.MaILgH0cG%2Fn9vprO60ke%2FopJhgNjqdUzdB0azeSEi38\",\n        \"postman-token\": \"06f28999-e374-474d-a830-506b1afe64e2\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\",\n        \"x-forwarded-proto\": \"https\"\n    },\n    \"json\": {\n        \"method\": \"DELETE\"\n    },\n    \"url\": \"https://postman-echo.com/delete\"\n}"
+					"body": "{\n    \"message\": \"Delete succeeded.\",\n    \"movieData\": {\n        \"movies\": {\n            \"0\": {\n                \"title\": \"Captain Marvelle\",\n                \"release\": \"1552021200000\",\n                \"director\": \"Anna Boden, Ryan Fleck\",\n                \"rating\": 4.2\n            },\n            \"1\": {\n                \"title\": \"Citizen Kane\",\n                \"release\": \"-893793600000\",\n                \"director\": \"Orson Welles\",\n                \"rating\": 4.8\n            },\n            \"2\": {\n                \"title\": \"Plan 9 from Outer Space\",\n                \"release\": \"-329688000000\",\n                \"director\": \"Ed Wood\",\n                \"rating\": \"1.2\"\n            }\n        },\n        \"lastIndex\": 13\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": \"user4\",\n\t\"password\": \"ab\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:3000/api/signup",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign Up (Inadequate password)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"user4\",\n\t\"password\": \"ab\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3000/api/signup",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "48"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"30-kgtoMZQB/mkXmiCZYz9emhCDfMo\""
+						},
+						{
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 05:12:51 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Error\": \"Password does not meet requirements.\"\n}"
+				},
+				{
+					"name": "Sign Up (user already exists)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"user2\",\n\t\"password\": \"abcdefG1\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3000/api/signup",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "35"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"23-IDW/xZ80ma3MoBq+XDgQcYsOpTY\""
+						},
+						{
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 05:09:17 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Error\": \"Username already exists\"\n}"
+				},
+				{
+					"name": "Sign Up Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"user2\",\n\t\"password\": \"abcdefG1\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3000/api/signup",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "16"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 05:08:36 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "https://localhost:3000/api/logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:3000/api/logout",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3000/api/logout",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "set-cookie",
+							"value": "token=; Max-Age=-1; Path=/; Expires=Fri, 19 Apr 2019 05:13:41 GMT; HttpOnly"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "19"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"13-Nr0/mHfr0YX/VW911xMdAAAMuXE\""
+						},
+						{
+							"key": "date",
+							"value": "Fri, 19 Apr 2019 05:13:41 GMT"
+						},
+						{
+							"key": "connection",
+							"value": "close"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "No longer logged in"
 				}
 			]
 		}
