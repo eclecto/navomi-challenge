@@ -2,7 +2,7 @@
   "movieData": {
     "movies": {
       "0": {
-        "title": "Captain Marvelle",
+        "title": "Captain Marvel",
         "release": "1552021200000",
         "director": "Anna Boden, Ryan Fleck",
         "rating": 4.2
@@ -20,13 +20,12 @@
         "rating": "1.2"
       }
     },
-    "lastIndex": 12
+    "lastIndex": 2
   },
   "userData": [
     {
       "username": "eric",
-      "password": "$2b$10$cilWGWKZ0.lHzjNquRJhROvxmd9M6axTk1dJpmGB.M.lRXXolBz4y",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaWMiLCJpYXQiOjE1NTU2NDcyNzMsImV4cCI6MTU1NTY1MDg3M30.OMESED17mRWU4jc4n02HuGDvhEsNXvDho1jjfvTrOgs"
+      "password": "$2b$10$cilWGWKZ0.lHzjNquRJhROvxmd9M6axTk1dJpmGB.M.lRXXolBz4y"
     }
   ]
 }

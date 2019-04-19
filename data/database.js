@@ -5,6 +5,8 @@ const { movieData } = data;
 const dbPath = './data/database.json';
 
 const saveDatabase = () => {
+  // Remove any token references that might have gotten attached to user objects.
+  data.userData.forEach(user => delete user.token); 
   fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
 }
 

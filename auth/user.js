@@ -11,7 +11,7 @@ class User {
   }
   
   static async register(username, password) {
-    if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,test(password)) {
+    if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
       return { Error: 'Password does not meet requirements.' };
     }
     if(db.getUser(username)) {
