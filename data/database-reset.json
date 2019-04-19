@@ -1,23 +1,31 @@
 {
-  "movies": {
-    "0": {
-      "title": "Captain Marvel",
-      "release": "1552021200000",
-      "director": "Anna Boden, Ryan Fleck",
-      "rating": 4.2
+  "movieData": {
+    "movies": {
+      "0": {
+        "title": "Captain Marvel",
+        "release": "1552021200000",
+        "director": "Anna Boden, Ryan Fleck",
+        "rating": 4.2
+      },
+      "1": {
+        "title": "Citizen Kane",
+        "release": "-893793600000",
+        "director": "Orson Welles",
+        "rating": 4.8
+      },
+      "2": {
+        "title": "Plan 9 from Outer Space",
+        "release": "-329688000000",
+        "director": "Ed Wood",
+        "rating": "1.2"
+      }
     },
-    "1": {
-      "title": "Citizen Kane",
-      "release": "-893793600000",
-      "director": "Orson Welles",
-      "rating": 4.8
-    },
-    "2": {
-      "title": "Plan 9 from Outer Space",
-      "release": "-329688000000",
-      "director": "Ed Wood",
-      "rating": "1.2"
-    }
+    "lastIndex": 2
   },
-  "lastIndex": 2
+  "userData": [
+    {
+      "username": "eric",
+      "password": "$2b$10$wA.ZxKZ5IQ.hpsfweIDzau/Gz8lAY1hp14MVxSpTFKE511Bnfebyu"
+    }
+  ]
 }

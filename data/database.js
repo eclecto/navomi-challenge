@@ -1,5 +1,6 @@
 import fs from 'fs';
 import data from './database.json';
+const { movieData } = data;
 
 const dbPath = './data/database.json';
 
@@ -8,48 +9,58 @@ const saveDatabase = () => {
 }
 
 class Database {
+  // User methods
+  register(user) {
+    data.userData.push(user);
+    saveDatabase();
+  }
   
+  getUser(username) {
+    return data.userData.filter(user => user.username === username)[0];
+  }
+  
+  // Movie methods
   add(newData) {
     console.log('adding row');
     delete newData.unsavedChanges;
-    let index = ++data.lastIndex;
-    data.movies[index] = newData;
+    let index = ++movieData.lastIndex;
+    movieData.movies[index] = newData;
     try{
       saveDatabase();
     } catch(e) {
       return { message: 'Add failed:', Error: e.message };
     }
-    return { message: 'Add succeeded.', data };
+    return { message: 'Add succeeded.', movieData };
   }
   
   save(row, newData) {
     console.log('saving row');
     try{
       delete newData.unsavedChanges;
-      if(!data.movies[row]) throw new Error('Row does not exist.');
-      data.movies[row] = newData;
-      console.log(data);
+      if(!movieData.movies[row]) throw new Error('Row does not exist.');
+      movieData.movies[row] = newData;
+      console.log(movieData);
       saveDatabase();
     } catch(e) {
       return { message: 'Update failed:', Error: e.message };
     }
-    return { message: 'Update succeeded.', data };
+    return { message: 'Update succeeded.', movieData };
   }
   
   get() {
-    console.log('returning data');
-    return data;
+    console.log('returning movieData');
+    return movieData;
   }
   
   delete(row) {
     try{
-      if(!data.movies[row]) throw new Error('Row does not exist.');
-      delete data.movies[row];
+      if(!movieData.movies[row]) throw new Error('Row does not exist.');
+      delete movieData.movies[row];
       saveDatabase();
     } catch(e) {
       return { message: 'Delete failed:', Error: e.message };
     }
-    return { message: 'Delete succeeded.', data };
+    return { message: 'Delete succeeded.', movieData };
   }
 }
 

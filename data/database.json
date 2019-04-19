@@ -18,23 +18,15 @@
         "release": "-329688000000",
         "director": "Ed Wood",
         "rating": "1.2"
-      },
-      "10": {
-        "title": "New again",
-        "release": 358488000000,
-        "director": "Bob",
-        "rating": "2.5"
-      },
-      "11": {
-        "title": "A Movie",
-        "release": null,
-        "director": "Eric Newland",
-        "rating": 5
       }
     },
-    "lastIndex": 11
+    "lastIndex": 12
   },
-  "userData": {
-    
-  }
+  "userData": [
+    {
+      "username": "eric",
+      "password": "$2b$10$cilWGWKZ0.lHzjNquRJhROvxmd9M6axTk1dJpmGB.M.lRXXolBz4y",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaWMiLCJpYXQiOjE1NTU2NDcyNzMsImV4cCI6MTU1NTY1MDg3M30.OMESED17mRWU4jc4n02HuGDvhEsNXvDho1jjfvTrOgs"
+    }
+  ]
 }
